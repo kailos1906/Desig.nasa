@@ -59,6 +59,7 @@ nav {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 23px;
 }
 
 .nav-links a:hover {
