@@ -2,33 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=0.8,maxium-scale=0.8,minium-scale=0.8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style/styles_start.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <title>Landsat Web App</title>
 </head>
 <body>
     <header class="cabeza">
         <nav>
-            <img src="img/logo.png" width="120px" />
-            <h1 class="titulo">Designious</h1>
+            <div class="nav-brand">
+                <img src="img/logo.png" alt="Logo Designious" width="120" height="120">
+                <h1 class="titulo">Designious</h1>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
                 <span></span>
             </label>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#acerca-lansat">Services</a></li>
-                <li><a href="index.html#servicios">About</a></li>
-                <li><a href="index.html#contacto">Contact</a></li>
+                <li><a href="#acerca-lansat">Services</a></li>
+                <li><a href="#servicios">About</a></li>
+                <li><a href="#contacto">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="content-container">
             <form id="landsat-form">
-                <img class="imagenNasa" src="img/ico2.jpeg" width="200px">
+                <img class="imagenNasa" src="img/ico2.jpeg" alt="NASA Icon" width="200" height="200">
                 <label for="location">Location:</label>
                 <input type="text" id="location" name="location" required>
 
@@ -44,42 +48,34 @@
                 <button type="submit">Search for images</button>
             </form>
 
-            <div id="map" style="width: 800px; height: 400px;"></div>
+            <div id="map"></div>
         </div>
-
-        <script>
-            // Inicializar el mapa centrado
-            var map = L.map('map').setView([2.4448, -76.6147], 15); // Coordenadas de ejemplo
-
-            // Añadir la capa de imágenes satelitales de Esri
-            var satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                attribution: '&copy; <a href="https://www.esri.com/en-us/home">Esri</a> & contributors',
-                maxZoom: 18
-            });
-
-            // Añadir la capa de nombres de ciudades, carreteras y límites
-            var labelsLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
-                attribution: '&copy; <a href="https://www.esri.com/en-us/home">Esri</a> & contributors',
-                maxZoom: 18
-            });
-
-            // Añadir ambas capas al mapa
-            satelliteLayer.addTo(map);
-            labelsLayer.addTo(map);
-        </script>
     </main>
     <footer>
-        <img src="img/logo.png" width="100px" />
-        <img src="img/icono.png" width="200px" >
         <div class="footer-content">
+            <div class="footer-logos">
+                <img src="img/logo.png" alt="Logo Designious" width="100" height="100">
+                <img src="img/icono.png" alt="Icono adicional" width="200" height="100">
+            </div>
             <p>&copy; 2026 Designious. Todos los derechos reservados.</p>
             <div class="social-links">
-                <a href="#" class="social-icon">FB</a>
-                <a href="#" class="social-icon">TW</a>
-                <a href="#" class="social-icon">IG</a>
-                <a href="#" class="social-icon">LI</a>
+                <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+                <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">LI</a>
             </div>
         </div>
     </footer>
+    <script>
+        var map = L.map('map').setView([2.4448, -76.6147], 15);
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '&copy; <a href="https://www.esri.com/en-us/home">Esri</a> & contributors',
+            maxZoom: 18
+        }).addTo(map);
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '&copy; <a href="https://www.esri.com/en-us/home">Esri</a> & contributors',
+            maxZoom: 18
+        }).addTo(map);
+    </script>
 </body>
 </html>
