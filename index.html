@@ -21,7 +21,7 @@
                 <span></span>
             </label>
             <ul class="nav-links">
-                <li><a href="#inicio">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#acerca-lansat">Services</a></li>
                 <li><a href="#servicios">About</a></li>
                 <li><a href="#contacto">Contact</a></li>
@@ -30,14 +30,14 @@
     </header>
 
     <main>
-        
+
         <section id="hero">
-            
+            <img src="img/icono.png" alt="">
             <h1>Welcome Designious</h1>
-            
             <p>See the World from Above: Discover, Analyze, Decide</p>
-            <a href="#contacto" class="cta-button">Start</a>
+            <a href="start.html" class="cta-button">Start</a>
         </section>
+
         <section id="acerca-lansat">
             <h2 class="subtitulos">About Lansat</h2>
             <p>
@@ -51,6 +51,7 @@
                 development of new tools and applications.
             </p>
         </section>
+
         <section id="servicios">
             <h2>Our Services</h2>
             <div class="servicios-grid">
@@ -67,18 +68,19 @@
                     <h3>Urban planning</h3>
                     <p>
                         Automatic notifications are sent when the Landsat 9 satellite passes near a selected urban area.
-                        High-resolution satellite images are provided, allowing our users to make informed decisions and conduct
-                        real-time analysis of urban expansion, infrastructure development, and any significant changes in the region.
+                        High-resolution satellite images are provided, allowing our users to make informed decisions and
+                        conduct
+                        real-time analysis of urban expansion, infrastructure development, and any significant changes
+                        in the region.
                     </p>
                 </div>
                 <div class="servicio">
                     <div class="servicio-icon">🛰️</div>
                     <h3>Scientific research</h3>
                     <p>
-                        
-                        Our specialized service notifies scientific researchers when the Landsat 9 
+                        Our specialized service notifies scientific researchers when the Landsat 9
                         satellite passes over their area of interest, providing high-resolution, up-to-date
-                        satellite imagery. These images are crucial for accessing the latest data, enabling 
+                        satellite imagery. These images are crucial for accessing the latest data, enabling
                         advanced analysis and ensuring more accurate and reliable scientific results.
                     </p>
                 </div>
@@ -86,8 +88,8 @@
                     <div class="servicio-icon">🚁</div>
                     <h3>Prevention and response to natural disasters</h3>
                     <p>
-                        Our service alerts authorities when the Landsat 9 satellite passes over affected areas, 
-                        providing updated images to assess damage and plan responses more efficiently. This ensures 
+                        Our service alerts authorities when the Landsat 9 satellite passes over affected areas,
+                        providing updated images to assess damage and plan responses more efficiently. This ensures
                         timely and informed decision-making during critical situations.
                     </p>
                 </div>
@@ -98,29 +100,36 @@
             <div class="acerca-content">
                 <h2>About us</h2>
 
-                <p>Welcome to <strong>"Desafío: Landsat Reflectance Data - On the Fly and at Your Fingertips"!</strong> We are a dynamic and diverse team of data enthusiasts and web developers, passionate about leveraging satellite imagery to tackle real-world challenges. Our goal is to harness the power of Landsat data to provide insights that benefit various sectors, including agriculture, environmental monitoring, and urban planning.</p>
+                <p>Welcome to <strong>"Desafío: Landsat Reflectance Data - On the Fly and at Your Fingertips"!</strong>
+                    We are a dynamic and diverse team of data enthusiasts and web developers, passionate about
+                    leveraging satellite imagery to tackle real-world challenges. Our goal is to harness the power of
+                    Landsat data to provide insights that benefit various sectors, including agriculture, environmental
+                    monitoring, and urban planning.</p>
 
-                <p>Our team consists of skilled professionals from around the world:</p>
                 <ul>
-                    <li><strong>Gabriel Alejandro Díaz Fierro</strong> (@gadiaz) – Colombia</li>
-                    <li><strong>Ángel Hernando Garzón Sarzosa</strong> (@angelszs01) – Colombia</li>
-                    <li><strong>Shrivastava Advita</strong> (@advita-9) – India</li>
-                    <li><strong>ALI WAQAS</strong> (@waqaschanna) – Pakistan</li>
-                    <li><strong>Carlos Andrés Higon Pino</strong> (@carlos_higón) – Colombia</li>
+                    <li><strong>Carlos Andrés Higon Pino</strong> (@carlos_higon) 🇨🇴 Colombia</li>
                 </ul>
-                
-                <p>Together, we bring a combination of expertise in <strong>Data Analysis</strong>, <strong>Data Visualization</strong>, and <strong>Web Development</strong>, ensuring a comprehensive approach to addressing the challenges we face. We communicate in <strong>English</strong> and <strong>Spanish</strong>, allowing us to collaborate effectively across borders.</p>
-                
-                <p>Join us on this exciting journey as we explore the vast possibilities of Landsat reflectance data and work towards innovative solutions that impact our communities and the planet.</p>
-                
+
+                <p>Together, we bring a combination of expertise in <strong>Data Analysis</strong>, <strong>Data
+                        Visualization</strong>, and <strong>Web Development</strong>, ensuring a comprehensive approach
+                    to addressing the challenges we face. We communicate in <strong>English</strong> and
+                    <strong>Spanish</strong>, allowing us to collaborate effectively across borders.</p>
+
+                <p>Join us on this exciting journey as we explore the vast possibilities of Landsat reflectance data and
+                    work towards innovative solutions that impact our communities and the planet.</p>
+
             </div>
+
         </section>
+
         <section id="contacto">
             <h2>Contact us</h2>
-            <form>
+            <form action="https://formspree.io/f/mgvewpya" method="POST">
                 <input type="text" name="nombre" placeholder="Your name" required />
                 <input type="email" name="email" placeholder="Your email" required />
                 <textarea name="mensaje" placeholder="Your message" required></textarea>
+                <!-- Anti-bot field -->
+                <input type="hidden" name="_captcha" value="false">
                 <button type="submit" class="cta-button">Send</button>
             </form>
         </section>
@@ -128,6 +137,7 @@
 
     <footer>
         <img src="img/logo.png" width="100px" />
+        <img src="img/icono.png" width="200px" >
         <div class="footer-content">
             <p>&copy; 2026 Designious. Todos los derechos reservados.</p>
             <div class="social-links">
